@@ -1,0 +1,69 @@
+config QTI_GLINK_CHARGER
+        tristate "QTI GLINK CHARGER"
+        default n
+        help
+         Say Y here if you have a mmi charger compatible
+         device connected.
+
+         This driver can also be built as a module.  If so, the module
+         will be called qqti_glink_charger.
+
+config WIRELESS_CPS4035B
+        tristate "WIRELESS_CPS4035B"
+        default n
+        help
+         Say Y here if you have a mmi charger compatible
+         device connected.
+
+         This driver can also be built as a module.  If so, the module
+         will be called qqti_glink_charger.
+
+config WIRELESS_CPS4019
+        tristate "WIRELESS_CPS4019"
+        default n
+        help
+         Say Y here if you have a mmi charger compatible
+         device connected.
+
+         This driver can also be built as a module.  If so, the module
+         will be called qqti_glink_charger.
+
+config MSB_DEV
+        tristate "MSB_DEV"
+        default n
+        help
+         Say Y here if you have a mmi charger compatible
+         device connected.
+
+         This driver can also be built as a module.  If so, the module
+         will be called qqti_glink_charger.
+
+config SWITCHEDCAP_DUMP
+        tristate "SWITCHEDCAP_DUMP"
+        default n
+        help
+         Say Y here if you have a mmi charger compatible
+         device connected.
+
+         This driver can also be built as a module.  If so, the module
+         will be called qqti_glink_charger.
+
+config SKIP_QTI_CHARGER_CONFIRMAION
+        tristate "SKIP_QTI_CHARGER_CONFIRMAION"
+        default n
+        help
+         Say Y here if you have a mmi charger compatible
+         device connected.
+
+         This driver can also be built as a module.  If so, the module
+         will be called qqti_glink_charger.
+
+config FUELGUAGE_DUMP
+        tristate "FUELGUAGE_DUMP"
+        default n
+        help
+         Say Y here if you have a mmi charger compatible
+         device connected.
+
+         This driver can also be built as a module.  If so, the module
+         will be called qqti_glink_charger.

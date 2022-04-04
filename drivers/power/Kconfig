@@ -5,5 +5,5 @@ source "drivers/power/supply/Kconfig"
 
 source "drivers/power/bm_adsp_ulog/Kconfig"
 source "drivers/power/mmi_charger/Kconfig"
+source "drivers/power/qti_glink_charger/Kconfig"
 source "drivers/power/qpnp_adaptive_charge/Kconfig"
-
