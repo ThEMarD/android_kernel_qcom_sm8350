@@ -989,10 +989,6 @@ static int dsi_panel_send_param_cmd(struct dsi_panel *panel,
 
         param_map = panel_param->val_map;
 
-	DSI_INFO("%s: param_name=%s; val_max =%d, default_value=%d, value=%d\n",
-	        __func__, panel_param->param_name, panel_param->val_max,
-		panel_param->default_value, panel_param->value);
-
 	mutex_lock(&panel->panel_lock);
 
 	if (!panel->panel_initialized) {
@@ -1005,12 +1001,8 @@ static int dsi_panel_send_param_cmd(struct dsi_panel *panel,
 
 	if (panel_param->value == param_info->value && param_info->param_idx != PARAM_DC_ID)
 	{
-		DSI_INFO("(mode=%d): requested value=%d is same. Do nothing\n",
-			param_info->param_idx, param_info->value);
 		rc = 0;
 	} else {
-		DSI_DEBUG("%s: requested: old=%d new=%d.\n", __func__,
-			panel_param->value, param_info->value);
 		param_map = panel->param_cmds[param_info->param_idx].val_map;
 		param_map_state = &param_map[param_info->value];
 
