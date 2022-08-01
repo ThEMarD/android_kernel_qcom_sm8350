@@ -168,6 +168,8 @@ static int cam_ois_power_up(struct cam_ois_ctrl_t *o_ctrl)
 		return rc;
 	}
 
+	CAM_INFO(CAM_OIS, "OIS Power up successfully");
+
 	rc = camera_io_init(&o_ctrl->io_master_info);
 	if (rc) {
 		CAM_ERR(CAM_OIS, "cci_init failed: rc: %d", rc);
@@ -216,6 +218,8 @@ static int cam_ois_power_down(struct cam_ois_ctrl_t *o_ctrl)
 		CAM_ERR(CAM_OIS, "power down the core is failed:%d", rc);
 		return rc;
 	}
+
+	CAM_INFO(CAM_OIS, "OIS power down successed");
 
 	camera_io_release(&o_ctrl->io_master_info);
 
@@ -1722,7 +1726,7 @@ static int cam_ois_pkt_parse(struct cam_ois_ctrl_t *o_ctrl, void *arg)
 	}
 pwr_dwn:
 	cam_mem_put_cpu_buf(dev_config.packet_handle);
-	cam_ois_power_down(o_ctrl);
+	//cam_ois_power_down(o_ctrl); /* ois will pown down in CAM_RELEASE_DEV when closed camera */
 	return rc;
 }
 
