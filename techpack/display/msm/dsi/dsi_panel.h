@@ -406,8 +406,6 @@ struct dsi_panel {
 	bool is_panel_dead;
 	int paramVersion;
 	int paramNum;
-	int dc_state;
-	struct msm_param_info curDCModeParaInfo;
 
 	struct brightness_alpha_pair *fod_dim_lut;
 	unsigned int fod_dim_lut_len;
